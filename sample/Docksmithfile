@@ -1,0 +1,7 @@
+FROM alpine:3.18
+WORKDIR /app
+ENV APP_NAME=DocksmithApp
+ENV APP_VERSION=1.0.0
+COPY . /app
+RUN sh -c "mkdir -p /app/output && echo 'Build OK for' $APP_NAME > /app/output/info.txt && echo 'Built successfully'"
+CMD ["sh", "/app/run.sh"]
