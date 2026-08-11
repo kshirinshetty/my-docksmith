@@ -18,6 +18,11 @@ Only `COPY` and `RUN` create layers; others modify configuration.
 Images are assembled by extracting layers into a temporary root filesystem.  
 Processes execute in isolation with no access to the host outside this root.
 
+## To run
+uv sync
+chmod +x run.sh
+./run.sh
+
 ## Usage 
 docksmith build -t name:tag .
 docksmith images
